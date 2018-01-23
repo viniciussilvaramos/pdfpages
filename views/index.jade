@@ -1,0 +1,47 @@
+doctype html
+html(ng-app="PdfPagesApp")
+    head
+        title="PDF Pages"
+        link(rel="icon", type="image/png", href="styles/favicon.png")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="libs/materialize/dist/css/materialize.min.css")
+        link(rel="stylesheet", href="styles/styles.css")
+    body(ng-controller="BookController")
+        header
+            input(type="hidden", value="#{user.userId}", id="userId")
+            nav.deep-purple.darken-1(role='navigation')
+                .nav-wrapper.container
+                    a#logo-container.brand-logo(href='#') Pdf Pages
+                    ul.right.hide-on-med-and-down
+                        li
+                            a(href='#') Hello, #{user.username}
+                                
+                    ul#nav-mobile.side-nav
+                        li
+                            a(href='#') Hello, #{user.username}
+                    a.button-collapse(href='#', data-activates='nav-mobile')
+                        i.material-icons menu
+                        
+        main.grey.lighten-4(handle-upload="")
+            .container
+                .section
+                    .row
+                        book-list(ng-show="showList")
+                        add-book-forms(ng-show="!showList")
+                        
+
+    script(src="libs/angular/angular.min.js")
+    script(src="libs/jquery/dist/jquery.min.js")
+    script(src="libs/materialize/dist/js/materialize.min.js")
+    script(src="libs/pouchdb/dist/pouchdb.min.js")      
+    script(src="libs/masonry/dist/masonry.pkgd.min.js")
+    
+    script(src="scripts/app.js")
+    script(src="scripts/factory/indexed-storage.js")
+    script(src="scripts/factory/book-storage.js")
+    script(src="scripts/factory/tabs.js")
+    script(src="scripts/factory/user.js")
+    script(src="scripts/directives/upload.js")
+    script(src="scripts/directives/books.js")
+    script(src="scripts/directives/forms.js")
+    script(src="scripts/controllers/books.js")

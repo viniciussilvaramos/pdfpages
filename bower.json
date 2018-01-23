@@ -1,0 +1,31 @@
+{
+  "name": "pdf-pages",
+  "description": "A pdf reader for reading and storing pdf online based on node and angular",
+  "main": "app.js",
+  "authors": [
+    "Vinicius Ramos"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "javascript",
+    "express",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "materialize": "^0.97.8",
+    "pouchdb": "^6.0.7",
+    "jquery": "^3.1.1"
+  }
+}

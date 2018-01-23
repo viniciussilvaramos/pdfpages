@@ -1,0 +1,4 @@
+{
+    "development":"sqlite://Data Source=/TEMP/dbbookstore.db;Version=3;",
+    "development_cloud9":"postgres://ubuntu:ubuntu@localhost:5432/dbmoviestore"
+}

@@ -1,0 +1,10 @@
+<div id="upload" ng-show="updloadActive">
+    <ul class="collection col s6 offset-s3">
+        <li class="collection-item" ng-repeat="(bookName, bookObject) in uploadBooks track by $index">
+            <span>{{bookName}}: {{bookObject.Message}}</span>
+            <div class="progress" ng-show="bookObject.Loading">
+                <div class="indeterminate"></div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,21 @@
+<div class="row book-container">
+    <div class="col s3" ng-repeat="book in books track by $index">
+        <div class="card z-depth-2">
+            <div class="card-content" ng-class="{'break-it':book.Title.indexOf(' ') < 0}">
+                <span class="card-title" ng-if="book.Title">{{book.Title}}</span>
+                <p ng-if="book.CurrentPage">Current Page: {{book.CurrentPage}}</p>
+            </div>
+            <div class="card-action center-align">
+                <a href="#" ng-click="openBook(book)" class="waves-effect waves-light btn-floating light-green darken-4">
+                    <i class="material-icons">open_in_new</i>
+                </a>
+                <a href="#" ng-click="editForm(book)" class="waves-effect waves-light btn-floating orange accent-4">
+                    <i class="material-icons">mode_edit</i>
+                </a>
+                <a href="#" ng-click="remove(book)" class="waves-effect waves-light btn-floating red darken-1">
+                    <i class="material-icons">delete</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

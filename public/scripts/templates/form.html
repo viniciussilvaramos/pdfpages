@@ -1,0 +1,19 @@
+<div ng-show="showForm">
+    <div class="col s4 offset-s4">
+        <div class="card">
+            <div class="card-content">
+                <form>
+                    <span class="card-title" ng-if="book.Title">{{book.Title}}</span>
+                    <div class="input-field">
+                        <label class="active" for="bookPage">Current Page</label>
+                        <input type="number" ng-model="book.CurrentPage" id="bookPage" min="1" class="validate" />
+                    </div>
+                </form>
+            </div>
+            <div class="card-action center-align">
+                <a href="#" class="waves-effect waves-light btn green" ng-click="save()">Save</a>
+                <a href="#" class="waves-effect waves-light btn red" ng-click="cancel()">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
